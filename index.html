@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Frontend Developer</title>
+</head>
+<body>
+    <div id="portfolio">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo header__logo">
+                <img class="logo__img" src="#" alt="main photo" />
+            </div>
+            <ul class="navigation header__navigation">
+                <li class="navigation__link"><span class="underline">About</span></li>
+                <li class="navigation__link"><span class="underline">Projects</span></li>
+                <li class="navigation__link"><span class="underline">Contacts</span></li>
+            </ul>
+        </header>
+        <!-- About -->
+        <section class="about">
+            <div class="section-title">
+                <h2 class="section-title__text">&lt; About &gt;</h2>
+            </div>
+            <div class="skills about__item about__skills">
+                <h2 class="title">Skills</h2>
+                 <p class="text"><strong><u>MARK-UP:</u></strong><span class="skills-link"> HTML5, </span><span class="skills-link">CSS3, </span><span class="skills-link">SCSS, </span><span class="skills-link">flex, </span><span class="skills-link">grids, </span><span class="skills-link">Bootstrap</span></p>
+                <p class="text"><strong><u>JAVASCRIPT:</u></strong><span class="skills-link"> Vanilla JS, </span><span class="skills-link">ES6, </span><span class="skills-link">JQuery</span></p>
+                <p class="text"><strong><u>FRAMEWORKS:</u></strong><span class="skills-link"> Vue JS, </span><span class="skills-link">React JS</span></p>
+                <p class="text"><strong><u>TOOLS:</u></strong><span class="skills-link"> Linux, </span><span class="skills-link"> Git/GitHub, </span><span class="skills-link"> Figma/Photoshop</span></p>
+                <p class="text"><strong><u>BASIC KNOWLEDGE:</u></strong> <span class="skills-link"> PHP, </span><span class="skills-link">SQL, </span><span class="skills-link">Webpack, </span><span class="skills-link">TypeScript, </span><span class="skills-link">Node JS and Express JS</span></p>
+            </div>
+            <div class="experience about__item about__experience">
+                <h2 class="title">Experience</h2>
+                <p class="text"><strong>Frontend Developer</strong> at SmartLine, Saint-Petersburg</br>08.2020 - present</p>
+                <p class="text"><strong>Frontend Developer</strong> in non-commercial projects, Saint-Petersburg</br>01.2020 - 08.2020</p>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section class="projects">
+            <div class="section-title">
+                <h2 class="section-title__text">&lt; projects &gt;</h2>
+            </div>
+            <div class="projects-slider mark-up projects__mark-up">
+                <!-- <h2 class="title">{{categories[0]}}</h2> -->
+                <div class="projects-slider-container projects-slider__container">
+                    <div class="project-item project-slider__item"  v-for="project in markUpProjects">
+                        <div class="project-item__visual">
+                            <a :href="project.link" target="_blank" class="project-item__link">
+                                <img v-bind:src="project.img" alt="{{project.name}}" class="project-item__img"/>
+                            </a>
+                        </div>
+                        <div class="project-item__tags">
+
+                        </div>
+                        <!-- <div class="project-item__text"></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="projects-slider vanilla-js projects__vanilla-js"></div>
+            <div class="projects-slider frameworks projects__frameworks"></div>
+            <div class="projects-slider rest-api projects__rest-api"></div>
+            <div class="projects-slider components projects__components"></div>
+            <div class="projects-slider others projects__others"></div>
+        </section>
+        <!-- Contacts -->
+        <section class="contacts">
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
