@@ -1,26 +1,53 @@
-$(document).ready(() => {
-    //Scroll to section id
-    $('.navigation__link').mPageScroll2id({
-        offset:70
+import projects from './projects.js';
+
+window.addEventListener('load', () => {
+    const grid = document.querySelector('.projects__grid');
+    projects.forEach(el => {
+        const node = document.createElement('a');
+        node.setAttribute('href', el.link);
+        node.setAttribute('target', '_blank');
+        node.classList.add('projects-item');
+
+        const projectName = document.createElement('div');
+        projectName.classList.add('projects-item__name');
+        projectName.textContent = el.name;
+
+        const projectDescription = document.createElement('div');
+        projectDescription.classList.add('projects-item__description');
+        projectDescription.textContent = el.description;
+
+        const flexBlock = document.createElement('div');
+        flexBlock.classList.add('project-item__content');
+
+        const projectImg = document.createElement('img');
+        projectImg.classList.add('projects-item__img');
+        projectImg.setAttribute('src', el.img);
+
+        const projectTechs = document.createElement('div');
+
+        el.categories.forEach(category => {
+            const projectTech = document.createElement('div');
+            projectTech.classList.add('projects-item__tech');
+            projectTech.textContent = category;
+            projectTechs.append(projectTech);
+        });
+
+        flexBlock.append(projectTechs, projectImg);
+        node.append(projectName, projectDescription, flexBlock);
+        grid.append(node);
     });
 });
 
-const app = new Vue({
-    el: '#portfolio',
-    data: {
-        projects: [
-            {id : 1, name: 'Mortgage Calculator', img: 'images/mortgage.PNG', github:'https://github.com/doragrishaeva/mortgage-calculator', link: 'https://doragrishaeva.github.io/mortgage-calculator/', description: "Example of mortgage calculator on Vue js", categories: ['Frameworks'], subCategories: ['BEM Methodology', 'Adaptive design', 'SCSS', 'Vue JS'] },
-            {id : 2, name: 'Shopping List', img: 'images/jquery-table.JPG', github:'https://github.com/doragrishaeva/jquery-table', link: 'https://doragrishaeva.github.io/jquery-table/', description: 'A single page app for shopping built on JQuery', categories: ['Components'], subCategories: ['JQuery', 'Bootstrap'] },
-            {id: 3, name: 'Ravenous', img: 'images/ravenous.PNG', github:'https://github.com/doragrishaeva/ravenous', link: 'https://doragrishaeva.github.io/ravenous/', description: 'Restaurant searcher on React.js', categories: ['Frameworks', 'REST API'], subCategories: ['React JS', 'REST API']},
-            {id : 4, name: 'Singolo', img: 'images/singolo.png', github:'https://github.com/doragrishaeva/singolo', link: 'https://doragrishaeva.github.io/singolo/', description: "Example of single page markup - Singolo", categories: ['Markup'], subCategories: ['BEM Methodology', 'JQuery', 'Adaptive design'] },
-            {id : 5, name: 'Webdev', img: 'images/webdevd.PNG', github:'https://github.com/doragrishaeva/webdev', link: 'https://doragrishaeva.github.io/webdev/', description: 'Example of single page markup built on SCSS', categories: ['Markup'], subCategories: ['BEM Methodology', 'Adaptive design', 'SCSS'] },
-            {id: 6, name: 'Rhyme Maker', img: 'images/rhyme-maker.PNG', github:'https://github.com/doragrishaeva/rhyme-maker', link: 'https://doragrishaeva.github.io/rhyme-maker/', description: 'A single page app for searching rhymes', categories: ['REST API'], subCategories: ['REST API'] },
-            // {id : 7, name: 'Barbershop', img: '', link: '', description: '', categories: ['Frameworks'], subCategories: ['БЭМ', 'SCSS', 'Webpack', 'Vue', 'Adaptive design', 'Bootstrap'] },
-            // {id : 8, name: 'Movie Searcher', img: '', link: '', description: '', categories: ['Frameworks'], subCategories: ['React', 'БЭМ', 'SCSS', 'Webpack'] },
-            // {id : 9, name: 'OOP Hamburger', img: '', link: '', description: '', categories: ['Other'], subCategories: ['Other'] },  
-            // {id : 10, name: 'Sing birds', img: '', link: '', description: '', categories: ['Frameworks'], subCategories: ['React', 'БЭМ', 'SCSS', 'Webpack'] }, 
-        ],
-        categories: ['Mark-up', 'Vanilla JS', 'Frameworks', 'REST API', 'Components', 'Other'],
-    },
-   
-})
+const navigationLinks = document.querySelectorAll('.navigation__link');
+const sections = document.querySelectorAll('[data-link]');
+
+navigationLinks.forEach(el => {
+    el.addEventListener('click', (event) => {
+        navigationLinks.forEach(el => el.classList.remove('navigation__link_active'));
+        event.currentTarget.classList.add('navigation__link_active');
+
+        let currentEl;
+        sections.forEach(el => el.dataset.link === event.target.dataset.href && (currentEl = el));
+        currentEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+});
