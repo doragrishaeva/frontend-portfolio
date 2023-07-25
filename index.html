@@ -1,122 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Frontend Developer</title>
-</head>
-<body>
-    <div id="portfolio">
-        <!-- Header -->
-        <header class="header">
-            <ul class="navigation header__navigation">
-                <li><a class="navigation__link" data-href="about">About</a></li>
-                <li><a class="navigation__link" data-href="projects">Projects</a></li>
-                <li><a class="navigation__link" data-href="contacts">Contacts</a></li>
-                <li class="navigation__link_button"><a href="Grishaeva Daria.pdf" target="_blank">CV</a></li>
-            </ul>
-        </header>
-        <!-- Main screen -->
-        <section class="main-screen">
-            <div class="main-screen-content main-screen__content">
-                <div class="main-screen-content__pretitle">Hi, my name is</div>
-                <div class="main-screen-content__title">Daria Grishaeva</div>
-                <div class="main-screen-content__subtitle">I'm a <span class="about__text_bright">Frontend Developer</span> from Russia. <br>I enjoy creating things that makes people's experience in the internet easier and more comfortable</div><br>
-                <span>
-                    <a href="https://t.me/doragrishaeva" class="main-screen-content__button">Contact me</a>
-                </span>
-            </div>
-            <div class="main-screen-links main-screen__links">
-                <ul>
-                    <li>
-                        <a class="main-screen__link" href="https://github.com/doragrishaeva" target="_blank"></a>
-                    </li>
-                    <li>
-                        <a class="main-screen__link" href="https://www.linkedin.com/in/daria-grishaeva-6a926a1b8" target="_blank"></a>
-                    </li>
-                    <li>
-                        <a class="main-screen__link" href="https://www.facebook.com/doragrishaeva" target="_blank"></a>
-                    </li>
-                    <li>
-                        <a class="main-screen__link" href="https://t.me/doragrishaeva" target="_blank"></a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- About -->
-        <section class="about" data-link="about">
-            <div class="section-title">
-                <h2 class="section-title__text">About</h2>
-                <hr>
-            </div>
-            <div class="about__container">
-                <div class="about__content">
-                    <div class="about__text">
-                        <p>Hello! I'm Daria, a <span class="about__text_bright">Frontend Developer</span> from Russia.</p>
-                        <br>
-                        <p>Here are few <span class="about__text_bright">technologies</span> I work with:</p>
-                    </div>
-                    <div class="about__techs">
-                        <ul>
-                            <li class="about__tech"><strong>Mark-up:</strong> HTML5, CSS3, SCSS, Bootstrap, Materialize UI</li>
-                            <li class="about__tech"><strong>JavaScript:</strong> Vanilla JS, ES6, ES8, JQuery, TypeScript</li>
-                            <li class="about__tech"><strong>Frameworks:</strong> React JS, Vue JS</li>
-                            <li class="about__tech"><strong>Tools:</strong> WebSockets, Redux/MobX, Webpack, Linux, Git/GitHub, Figma/Photoshop</li>
-                            <li class="about__tech"><strong>Beginner Level:</strong> Node JS, SQL, PHP, Canvas</li>
-                        </ul>
-                    </div>
-                    <div class="about__text">
-                        <p>I worked as a</p>
-                        <ul>
-                            <li class="about__experience">
-                                <span class="about__text_bright">Frontend Developer</span> at <a class="about__text_bright" href="https://www.wartsila.com/" target="_blank">Wärtsilä</a>, Russia
-                                </br><span class="about__text_bright">Stack:</span> React, TypeScript, MobX, SCSS
-                                </br>01.2021 - present
-                            </li>
-                            <li class="about__experience">
-                                <span class="about__text_bright">Frontend Developer</span> at <a class="about__text_bright"href="https://smartline.solutions/" target="_blank">SmartLine</a>, Russia
-                                </br><span class="about__text_bright">Stack:</span> Vue, JQuery, SCSS
-                                </br>08.2020 - 11.2020
-                            </li>
-                            <li class="about__experience"><span class="about__text_bright">Frontend Developer</span> in non-commercial projects, Russia</br>01.2020 - 08.2020</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="about__picture">
-                    <img class="about__image" src="images/photo.jpg"/>
-                </div>
-            </div>
-        </section>
-        <!-- Projects -->
-        <section class="projects" data-link="projects">
-            <div class="section-title">
-                <h2 class="section-title__text">Projects</h2>
-                <hr>
-            </div>
-            <div class="projects-grid projects__grid"></div>
-        </section>
-        <!-- Contacts -->
-        <section class="contacts" data-link="contacts">
-            <div class="section-title">
-                <h2 class="section-title__text">Contacts</h2>
-                <hr>
-            </div>
-            <div class="contacts__title">Get In Touch</div>
-            <div class="contacts-container contacts__container">
-                <div class="contacts__items">
-                    <p><b>Phone: </b><a class="contacts__phone" href="tel:+79315365561">+7 (931) 536 55-61</a></p>
-                    <p><b>Email:</b> d.grishaevaa@gmail.com</p>
-                </div>
-                <span>
-                    <a href="https://t.me/doragrishaeva" class="contacts__button">Contact me</a>
-                </span>
-            </div>
-        </section>
-    </div>
-    <script type="module" src="index.js"></script>
-</body>
+    <title>Frontend Developer | Daria Grishaeva</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
