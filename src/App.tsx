@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { Button, TopBar, SocialMedia, Player } from './components';
-import jsonData from './assets/info.json';
+import { infoData } from './assets/info';
 import { Info } from './interfaces';
 
 export const App: React.FC = () => {
@@ -11,7 +11,7 @@ export const App: React.FC = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        setData(jsonData);
+        setData(infoData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }

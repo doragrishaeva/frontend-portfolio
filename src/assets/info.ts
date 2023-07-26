@@ -1,4 +1,10 @@
-{
+import memoryGameVideo from './projects/memory-game.webm';
+import playerVideo from './projects/player.webm';
+import photographVideo from './projects/photograph.webm';
+import webimVideo from './projects/webim.webm';
+import calculatorVideo from './projects/mortgage-calc.webm';
+
+export const infoData = {
   "technologies": [
     {
       "id": 1,
@@ -119,27 +125,27 @@
   "projects": [
     {
       "id": 1,
-      "video": "src/assets/projects/memory-game.webm",
+      "video": memoryGameVideo,
       "github": "https://github.com/doragrishaeva/memory-game"
     },
     {
       "id": 2,
-      "video": "src/assets/projects/player.webm",
+      "video": playerVideo,
       "github": "https://github.com/doragrishaeva/player"
     },
     {
       "id": 3,
-      "video": "src/assets/projects/photograph.webm",
+      "video": photographVideo,
       "github": "https://github.com/doragrishaeva/portfolio"
     },
     {
       "id": 4,
-      "video": "src/assets/projects/webim.webm",
+      "video": webimVideo,
       "github": "https://github.com/doragrishaeva/emphasoft_test"
     },
     {
       "id": 5,
-      "video": "src/assets/projects/mortgage-calc.webm",
+      "video": calculatorVideo,
       "github": "https://github.com/doragrishaeva/mortgage-calculator"
     },
     {
