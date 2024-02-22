@@ -5,6 +5,8 @@ import { Button, TopBar, SocialMedia, Player } from './components';
 import { infoData } from './assets/info';
 import { Info } from './interfaces';
 
+import './App.scss';
+
 export const App: React.FC = () => {
   const [data, setData] = React.useState<Info|null>(null);
 
@@ -31,12 +33,12 @@ export const App: React.FC = () => {
       <div>
         <div className='mt-[10vh] ml-[20%]'>
           <div className='text-highlight'>Hi, my name is</div>
-          <div className='text-[70px] font-semibold text-title'>Daria Grishaeva</div>
+          <div className='text-[70px] font-semibold text-title typing-element'>Daria Grishaeva</div>
           <div className='text-text mb-12'>I'm a 
             <span className='text-highlight'> Frontend Developer</span> experienced in React, Angular, and microfrontends. 
             <div>UI/UX is my jam – I thrive on creating awesome user experiences. </div>
             Agile-driven and always learning. 
-            <div>Let's build something amazing together! 🚀</div>
+            <div>Let's build something amazing together! <div className="rocket-icon"></div></div>
           </div>
           <Button onClick={contactClick}>Contact Me</Button>
         </div>
@@ -71,6 +73,13 @@ export const App: React.FC = () => {
 
         <div className='mt-[60vh] mx-auto' id='Projects'>
           <div className='text-title font-semibold text-[32px] ml-[20%] mb-3'>Projects</div>
+          <div className='text-text text-sm mx-[10%] mb-6'>
+            <div className='text-highlight'>Welcome to my projects section!</div>
+            Here, you'll find a collection of works that I passionately crafted during 2020-2021.<br /> 
+            While these projects showcase my skills and creativity during that period, please note that they might be a bit outdated as my journey in tech continues to evolve. <br />
+            I'm currently cooking up something bigger and even more exciting! <br />
+            Stay tuned for what's next, and thank you for exploring my portfolio.<br />
+          </div>
           <div className='grid grid-cols-3 max-w-[80vw] h-full mx-auto gap-8'>
             {data?.projects.map(project => {
               return (<div key={project.id}>

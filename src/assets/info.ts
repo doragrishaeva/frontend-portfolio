@@ -161,7 +161,7 @@ export const infoData = {
     },
     {
       "id": 2,
-      "link": "https://www.linkedin.com/in/daria-grishaeva-6a926a1b8/"
+      "link": "https://www.linkedin.com/in/dgrishaeva/"
     },
     {
       "id": 3,
