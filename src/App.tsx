@@ -31,9 +31,9 @@ export const App: React.FC = () => {
     <div className='bg-bg'>
       <TopBar></TopBar>
       <div>
-        <div className='mt-[10vh] ml-[20%]'>
+        <div className='mt-[10vh] sm:mx-[10%] md:mx-[5%] lg:mx-[20%]'>
           <div className='text-highlight'>Hi, my name is</div>
-          <div className='text-[70px] font-semibold text-title typing-element'>Daria Grishaeva</div>
+          <div className='sm:text-[32px] md:text-[70px] font-semibold text-title typing-element'>Daria Grishaeva</div>
           <div className='text-text mb-12'>I'm a 
             <span className='text-highlight'> Frontend Developer</span> experienced in React, Angular, and microfrontends. 
             <div>UI/UX is my jam – I thrive on creating awesome user experiences. </div>
@@ -43,7 +43,7 @@ export const App: React.FC = () => {
           <Button onClick={contactClick}>Contact Me</Button>
         </div>
 
-        <div className='mt-[60vh] ml-[20%]' id='About'>
+        <div className='mt-[60vh] sm:mx-[10%] md:mx-[5%] lg:mx-[20%]' id='About'>
           <div className='text-title font-semibold text-[32px]'>About</div>
           <div>
             <div className='text-text mb-3'>Here are few <span className='text-highlight'>technologies</span> I work with:</div>
@@ -71,16 +71,16 @@ export const App: React.FC = () => {
           </div>
         </div>
 
-        <div className='mt-[60vh] mx-auto' id='Projects'>
-          <div className='text-title font-semibold text-[32px] ml-[20%] mb-3'>Projects</div>
-          <div className='text-text text-sm mx-[10%] mb-6'>
+        <div className='mt-[60vh] sm:mx-[10%] md:mx-[5%] lg:mx-[10%]' id='Projects'>
+          <div className='text-title font-semibold text-[32px] mb-3'>Projects</div>
+          <div className='text-text text-sm mb-6'>
             <div className='text-highlight'>Welcome to my projects section!</div>
             Here, you'll find a collection of works that I passionately crafted during 2020-2021.<br /> 
             While these projects showcase my skills and creativity during that period, please note that they might be a bit outdated as my journey in tech continues to evolve. <br />
             I'm currently cooking up something bigger and even more exciting! <br />
             Stay tuned for what's next, and thank you for exploring my portfolio.<br />
           </div>
-          <div className='grid grid-cols-3 max-w-[80vw] h-full mx-auto gap-8'>
+          <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[80vw] h-full mx-auto gap-8'>
             {data?.projects.map(project => {
               return (<div key={project.id}>
                 <Player videoLink={project.video} repoLink={project.github}></Player>

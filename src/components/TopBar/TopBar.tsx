@@ -67,7 +67,7 @@ export const TopBar: React.FC = () => {
   };
 
   return (
-    <div className='flex w-96 ml-auto justify-between items-center mr-12 py-6 sticky top-0'>
+    <div className='sm:invisible md:visible flex w-96 ml-auto justify-between items-center mr-12 py-6 sticky top-0'>
       {tabs.map((tab) => {
         return (
           <div key={tab.id} className={classNames('uppercase cursor-pointer transition-[color] duration-300 ease-in-out hover:text-highlight', { 'text-highlight': tab.id === activeTab, 'text-title': tab.id !== activeTab })} onClick={() => goToSection(tab.value)}>{tab.value}</div>

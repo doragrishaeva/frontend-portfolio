@@ -4,6 +4,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	border-right: 3px solid;
+	@apply sm:w-[300px] md:w-[645px];
 }
   
 @keyframes typing {

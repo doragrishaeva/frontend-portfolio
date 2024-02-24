@@ -12,6 +12,11 @@ export default {
       'text': '#8892b0',
       'title': '#ccd6f6',
     },
+    screens: {
+      'sm': '390px',
+      'md': '768px',
+      'lg': '1024px',	
+    },
     extend: {
      boxShadow: {
         'md': '0px 0px 3px 0px rgba(87, 225, 195, 1)',
