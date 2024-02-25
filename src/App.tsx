@@ -29,7 +29,9 @@ export const App: React.FC = () => {
 
   return (
     <div className='bg-bg'>
-      <TopBar></TopBar>
+      <div className='bg-bg sticky top-0 sm:invisible md:visible z-[100]'>
+        <TopBar></TopBar>
+      </div>
       <div>
         <div className='mt-[10vh] sm:mx-[10%] md:mx-[5%] lg:mx-[20%]'>
           <div className='text-highlight'>Hi, my name is</div>

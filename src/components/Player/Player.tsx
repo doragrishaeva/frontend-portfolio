@@ -18,8 +18,10 @@ export const Player: React.FC<Player> = ({ videoLink, repoLink }) => {
 
     const playVideo = () => {
       if (videoElement) {
+        videoElement.currentTime = 2;
         videoElement.play();
         videoElement.playbackRate = 1.5;
+        videoElement.loop = true;
         setIsPLaying(true);
       }
     };
@@ -51,7 +53,7 @@ export const Player: React.FC<Player> = ({ videoLink, repoLink }) => {
         ref={videoRef}
         className='w-full h-auto rounded-xl block z-0 absolute top-0 left-0'
       >
-        <source src={videoLink} type="video/webm" />
+        <source src={videoLink} type="video/mp4" />
         Your browser does not support the video tag.
       </video> : <div className='animated-gradient rounded-xl cursor-default'></div>}
     </div>

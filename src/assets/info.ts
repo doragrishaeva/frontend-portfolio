@@ -1,8 +1,8 @@
-import memoryGameVideo from './projects/memory-game.webm';
-import playerVideo from './projects/player.webm';
-import photographVideo from './projects/photograph.webm';
-import webimVideo from './projects/webim.webm';
-import calculatorVideo from './projects/mortgage-calc.webm';
+import memoryGameVideo from './projects/memory-game.mp4';
+import playerVideo from './projects/player.mp4';
+import photographVideo from './projects/photograph.mp4';
+import webimVideo from './projects/webim.mp4';
+import calculatorVideo from './projects/mortgage-calc.mp4';
 import pageImg from './projects/page.png';
 
 export const infoData = {
