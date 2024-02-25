@@ -3,6 +3,7 @@ import playerVideo from './projects/player.webm';
 import photographVideo from './projects/photograph.webm';
 import webimVideo from './projects/webim.webm';
 import calculatorVideo from './projects/mortgage-calc.webm';
+import pageImg from './projects/page.png';
 
 export const infoData = {
   "technologies": [
@@ -154,6 +155,10 @@ export const infoData = {
       "github": ""
     }
   ],
+  "new": {
+    "link": "https://doragrishaeva.github.io/page/",
+    "image": pageImg
+  },
   "socialMedia": [
     {
       "id": 1,

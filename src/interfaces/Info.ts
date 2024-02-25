@@ -8,4 +8,5 @@ export interface Info {
   experience: Experience[];
   projects: Project[];
   socialMedia: SocialMediaItem[];
+  new: any;
 }

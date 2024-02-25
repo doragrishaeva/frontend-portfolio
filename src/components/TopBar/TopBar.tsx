@@ -12,7 +12,7 @@ interface TopBarTab {
 export const TopBar: React.FC = () => {
   const tabs: TopBarTab[] = [
     { id: 1, value: 'About' },
-    { id: 2, value: 'Projects' }
+    { id: 2, value: 'Pet Projects' }
   ];
   const [activeTab, setActiveTab] = React.useState<number>(null);
   const observer = React.useRef<IntersectionObserver | null>(null);

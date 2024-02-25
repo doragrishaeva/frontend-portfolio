@@ -71,11 +71,25 @@ export const App: React.FC = () => {
           </div>
         </div>
 
-        <div className='mt-[60vh] sm:mx-[10%] md:mx-[5%] lg:mx-[10%]' id='Projects'>
-          <div className='text-title font-semibold text-[32px] mb-3'>Projects</div>
+        <div className='mt-[60vh] sm:mx-[10%] md:mx-[5%] lg:mx-[10%]' id='Pet Projects'>
+          <div className='text-title font-semibold text-[32px] mb-3'>Pet Projects</div>
           <div className='text-text text-sm mb-6'>
-            <div className='text-highlight'>Welcome to my projects section!</div>
-            Here, you'll find a collection of works that I passionately crafted during 2020-2021.<br /> 
+            <div className='flex sm:flex-col lg:flex-row items-center gap-x-4 mb-4'>
+              <div className='basis-1/2'>
+              <div className='text-highlight'>Welcome to my pet projects section!</div>
+                Explore the early drafts of my latest project, currently in progress.<br />
+                This project gives you a sneak peek into the early ideas and sketches that are guiding its creation and I'm excited to share it with you. <br />
+                Your thoughts and feedback are welcome as we move forward. Keep an eye out for more updates! <br />
+              </div>
+              <a href={data?.new?.link} target="_blank" className='sm:w-full lg:basis-1/2'>
+                <div className='rounded-xl my-8 relative h-[50vh] w-full bg-no-repeat bg-cover bg-left' 
+                    style={{ backgroundImage: `url(${data?.new?.image})` }}>
+                  <div className='overlay-text'></div>
+                </div>
+              </a>
+            </div>
+
+            Below you'll find a collection of works that I passionately crafted during <span className='text-highlight'>2020-2021.</span><br /> 
             While these projects showcase my skills and creativity during that period, please note that they might be a bit outdated as my journey in tech continues to evolve. <br />
             I'm currently cooking up something bigger and even more exciting! <br />
             Stay tuned for what's next, and thank you for exploring my portfolio.<br />
